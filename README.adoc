@@ -1,0 +1,29 @@
+= nocolor
+
+A Hugo theme with no predefined colors. If you want source code highlighting,
+take a look at https://github.com/mozmorris/tomorrow-pygments[].
+
+The theme is based on https://github.com/spookey/slick[Slick].
+
+== Installation
+
+Just download the theme or clone it into your `themes/` directory:
+
+[source,shell]
+----
+cd themes && git clone https://schlomp.space/tastytea/hugo-theme-nocolor.git
+----
+
+Then reference it in your `config`:
+
+[source,toml]
+----
+theme = "nocolor"
+----
+
+Or when building the site, pass it in to the CLI:
+
+[source,shell]
+----
+hugo -t nocolor
+----

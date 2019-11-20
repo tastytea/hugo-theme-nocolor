@@ -1,0 +1,25 @@
+<div class="footer">
+  <div class="nav nav-bottom">
+    <ul>
+      {{- range .Site.Menus.footer }}
+      <li>
+        {{- if .URL }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{- else }}
+        {{ .Name }}
+        {{- end }}
+      </li>
+      {{- end }}
+      {{- with .Site.RSSLink }}
+      <li>
+        <a href="{{ . }}">RSS</a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- with .Site.Copyright }}
+  <div class="copyright">
+    &copy; {{ now.Format "2006" }} &mdash; {{ . }}
+  </div>
+  {{- end }}
+</div>

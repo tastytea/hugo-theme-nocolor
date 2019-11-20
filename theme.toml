@@ -1,0 +1,17 @@
+name = "nocolor"
+license = "MIT"
+licenselink = "http://opensource.org/licenses/MIT"
+description = "A Hugo theme with no predefined colors."
+homepage = "https://schlomp.space/tastytea/hugo-theme-nocolor"
+tags = ["blog", "minimal", "high contrast"]
+features = ["responsive", "black-and-white", "fulltext rss feed"]
+min_version = "0.43"
+
+[author]
+    name = "tastytea"
+    homepage = "https://tastytetea.de/"
+
+[original]
+    name = "Slick"
+    homepage = "https://themes.gohugo.io/slick"
+    repo = "https://github.com/spookey/slick"
