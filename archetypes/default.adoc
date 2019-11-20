@@ -1,0 +1,13 @@
+---
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+description: null
+date: {{ .Date }}
+type: {{ .Type }}
+draft: true
+categories:
+- General
+tags:
+-
+series:
+-
+---
