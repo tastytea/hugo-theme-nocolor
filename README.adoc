@@ -1,9 +1,14 @@
 = nocolor
+:uri-tomorrow-pygments: https://github.com/mozmorris/tomorrow-pygments
+:uri-slick: https://github.com/spookey/slick
+:uri-slick-example: {uri-slick}/blob/master/_sites/example/config.toml
 
-A Hugo theme with no predefined colors. If you want source code highlighting,
-take a look at https://github.com/mozmorris/tomorrow-pygments[].
+A Hugo theme with no predefined colors and minimal styling. If you want source
+code highlighting, take a look at
+link:{uri-tomorrow-pygments}[tomorrow-pygments].
 
-The theme is based on https://github.com/spookey/slick[Slick].
+The theme is based on link:{uri-slick}[Slick]. Their
+link:{uri-slick-example}[configuration example] is valid for nocolor too.
 
 == Installation
 
@@ -27,3 +32,9 @@ Or when building the site, pass it in to the CLI:
 ----
 hugo -t nocolor
 ----
+
+== Modification
+
+You can add things to the end of the `<head>` section by overwriting the partial
+template `extra-head.html`. The common way to do it is to create
+`layouts/partials/extra_head.html`.
