@@ -1,0 +1,19 @@
+# Configuration file for EditorConfig.
+# More information is available under <https://editorconfig.org/>.
+
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{css,toml}]
+indent_size = 4
+tab_width = 4
+
+[*.{html,xml}]
+indent_size = 2
+tab_width = 2
