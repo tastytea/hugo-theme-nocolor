@@ -17,6 +17,7 @@
   {{- $favtype := cond (eq (path.Ext $favicon) ".png") "image/png" "image/x-icon" }}
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ $favicon }}" type="{{ $favtype }}" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/style.css" />
+  {{ partial "extra_head.html" . }}
 </head>
 <body>
 
