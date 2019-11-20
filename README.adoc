@@ -1,4 +1,6 @@
 = nocolor
+:project: hugo-theme-nocolor
+:uri-base: https://schlomp.space/tastytea/{project}
 :uri-hugo: https://gohugo.io/
 :uri-slick: https://github.com/spookey/slick
 :uri-slick-example: {uri-slick}/blob/master/_sites/example/config.toml
@@ -53,3 +55,5 @@ template `extra-head.html`. The common way to do it is to create
 
 If you want source code highlighting, take a look at
 link:{uri-tomorrow-pygments}[tomorrow-pygments].
+
+include::{uri-base}/raw/branch/main/CONTRIBUTING.adoc[]
