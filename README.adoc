@@ -1,14 +1,23 @@
 = nocolor
-:uri-tomorrow-pygments: https://github.com/mozmorris/tomorrow-pygments
+:uri-hugo: https://gohugo.io/
 :uri-slick: https://github.com/spookey/slick
 :uri-slick-example: {uri-slick}/blob/master/_sites/example/config.toml
+:uri-opengraph: http://ogp.me/
+:uri-schema: https://schema.org/
+:uri-twittercards: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards.html
+:uri-tomorrow-pygments: https://github.com/mozmorris/tomorrow-pygments
 
-A Hugo theme with no predefined colors and minimal styling. If you want source
-code highlighting, take a look at
-link:{uri-tomorrow-pygments}[tomorrow-pygments].
+*nocolor* is a link:{uri-hugo}[Hugo] theme with no predefined colors and minimal
+styling. It is based on link:{uri-slick}[Slick].
 
-The theme is based on link:{uri-slick}[Slick]. Their
-link:{uri-slick-example}[configuration example] is valid for nocolor too.
+== Features
+
+* Supports taxonomies of tags, categories and series with their own pages.
+* RSS Feed with complete entries.
+* link:{uri-opengraph}[Open Graph], link:{uri-schema}[Schema.org] and
+  link:{uri-twittercards}[Twitter Cards] support.
+* Fully customizable menu entries.
+* No JavaScript, no bundled fonts, no external requests.
 
 == Installation
 
@@ -35,6 +44,12 @@ hugo -t nocolor
 
 == Modification
 
+Please take a look at the link:{uri-slick-example}[configuration example for
+Slick]. It is valid for nocolor too.
+
 You can add things to the end of the `<head>` section by overwriting the partial
 template `extra-head.html`. The common way to do it is to create
 `layouts/partials/extra_head.html`.
+
+If you want source code highlighting, take a look at
+link:{uri-tomorrow-pygments}[tomorrow-pygments].
