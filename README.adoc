@@ -27,7 +27,7 @@ Just download the theme or clone it into your `themes/` directory:
 
 [source,shell]
 ----
-cd themes && git clone https://schlomp.space/tastytea/hugo-theme-nocolor.git
+cd themes && git clone https://schlomp.space/tastytea/hugo-theme-nocolor.git nocolor
 ----
 
 Then reference it in your `config`:
