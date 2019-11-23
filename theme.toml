@@ -9,7 +9,7 @@ min_version = "0.43"
 
 [author]
     name = "tastytea"
-    homepage = "https://tastytetea.de/"
+    homepage = "https://tastytea.de/"
 
 [original]
     name = "Slick"
