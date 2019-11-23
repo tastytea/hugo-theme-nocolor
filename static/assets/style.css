@@ -50,3 +50,52 @@ h1, h2, h3, h4, h5, h6
 {
     margin-top: 1em;
 }
+
+div.listingblock pre
+{
+    margin-top: 0.1em;
+}
+
+li > p
+{
+    margin: 0.1em;
+}
+
+/* AsciiDoc admonition blocks. */
+div.admonitionblock > table, div.admonitionblock td
+{
+    border: 0;
+}
+
+div.admonitionblock td.icon
+{
+    font-size: 120%;
+    border-right: 0.2em solid;
+}
+
+div.admonitionblock td.icon div.title::after
+{
+    content: ":";
+}
+
+div.admonitionblock
+{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+div.admonitionblock td
+{
+    padding: 0.5em 1em;
+}
+
+/* AsciiDoc images. */
+.right
+{
+    float: right;
+}
+
+.left
+{
+    float: left;
+}
