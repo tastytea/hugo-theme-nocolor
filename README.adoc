@@ -50,8 +50,10 @@ Please take a look at the link:{uri-slick-example}[configuration example for
 Slick]. It is valid for nocolor too.
 
 You can add things to the end of the `<head>` section by overwriting the partial
-template `extra-head.html`. The common way to do it is to create
-`layouts/partials/extra_head.html`.
+template `extra-head.html` or above the footer by overwriting
+`extra_foot.html`. The common way to do it is to create
+`layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
+respectively.
 
 If you want source code highlighting, take a look at
 link:{uri-tomorrow-pygments}[tomorrow-pygments].
