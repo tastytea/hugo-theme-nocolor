@@ -105,3 +105,8 @@ div.admonitionblock td
     border-left: solid;
     padding-left: 0.5em;
 }
+
+#footnotes
+{
+    margin-top: 2em;
+}
