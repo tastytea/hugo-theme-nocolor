@@ -99,3 +99,9 @@ div.admonitionblock td
 {
     float: left;
 }
+
+.quoteblock
+{
+    border-left: solid;
+    padding-left: 0.5em;
+}
