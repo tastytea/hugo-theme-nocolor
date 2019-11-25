@@ -9,6 +9,12 @@ body
     margin: auto;
 }
 
+/* Minimum margin for small screens. */
+body>*
+{
+    margin: 0 5px;
+}
+
 .header
 {
     font-size: 150%;
