@@ -16,7 +16,15 @@
   {{- $favicon := .Site.Params.favicon | default "favicon.ico" }}
   {{- $favtype := cond (eq (path.Ext $favicon) ".png") "image/png" "image/x-icon" }}
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ $favicon }}" type="{{ $favtype }}" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/style.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/nocolor.css" />
+  {{- with .Site.Params.css }}
+    {{- if resources.Get . }}
+      {{- $styleCustom := resources.Get . | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $styleCustom.RelPermalink }}" />
+    {{- else if fileExists (path.Join "static" .) }}
+  <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}" />
+    {{- end }}
+  {{- end }}
   {{ partial "extra_head.html" . }}
 </head>
 <body>
