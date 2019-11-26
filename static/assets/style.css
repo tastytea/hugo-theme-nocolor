@@ -82,7 +82,7 @@ div.admonitionblock > table, div.admonitionblock td
 div.admonitionblock td.icon
 {
     font-size: 120%;
-    border-right: 0.2em solid;
+    border-right: solid;
 }
 
 div.admonitionblock td.icon div.title::after
