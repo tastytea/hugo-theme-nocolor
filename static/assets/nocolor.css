@@ -38,13 +38,13 @@ body>*
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    display:inline-block;
+    display: inline-block;
 }
 
 .nav li, .pagination li
 {
     list-style: none;
-    display:inline-block;
+    display: inline-block;
     margin-right: 0.5em;
     padding: 0;
 }
@@ -132,4 +132,9 @@ div.admonitionblock td
 #toc ul
 {
     margin-top: 0;
+}
+
+textarea, pre
+{
+    overflow: auto;
 }
