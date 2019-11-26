@@ -23,6 +23,11 @@ body>*
     font-family: sans-serif;
 }
 
+.header .description::before
+{
+    content: " – ";
+}
+
 .header .description
 {
     font-size: 75%;
