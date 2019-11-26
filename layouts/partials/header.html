@@ -4,7 +4,7 @@
   <span class="description">{{ . }}</span>
   {{- end }}
 </div>
-<div class="nav nav-top">
+<nav class="nav nav-top">
   <ul>
     {{- $curr := . }}
     {{- range .Site.Menus.main }}
@@ -14,4 +14,4 @@
     </li>
     {{- end }}
   </ul>
-</div>
+</nav>
