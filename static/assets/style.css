@@ -12,7 +12,8 @@ body
 /* Minimum margin for small screens. */
 body>*
 {
-    margin: 0 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .header
