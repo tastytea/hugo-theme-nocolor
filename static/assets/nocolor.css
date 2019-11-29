@@ -88,6 +88,7 @@ div.admonitionblock td.icon
 {
     font-size: 120%;
     border-right: solid;
+    font-weight: bold;
 }
 
 div.admonitionblock td.icon div.title::after
