@@ -23,26 +23,11 @@ styling. It is based on link:{uri-slick}[Slick].
 
 == Installation
 
-Just download the theme or clone it into your `themes/` directory:
-
 [source,shell]
-----
-cd themes && git clone https://schlomp.space/tastytea/hugo-theme-nocolor.git nocolor
-----
-
-Then reference it in your `config`:
-
-[source,toml]
-----
-theme = "nocolor"
-----
-
-Or when building the site, pass it in to the CLI:
-
-[source,shell]
-----
-hugo -t nocolor
-----
+--------------------------------------------------------------------------------
+git submodule add https://schlomp.space/tastytea/hugo-theme-nocolor.git themes/nocolor
+echo 'theme = "nocolor"' >> config.toml
+--------------------------------------------------------------------------------
 
 == Modification
 
