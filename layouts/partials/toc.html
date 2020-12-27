@@ -1,1 +1,8 @@
-<!-- You can overwrite this partial to add a TOC. See <https://gohugo.io/content-management/toc>. -->
+{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+<aside class="toc">
+  <header>
+    <h2>Table of contents</h2>
+    </header>
+    {{.TableOfContents}}
+</aside>
+{{ end }}

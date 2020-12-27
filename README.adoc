@@ -41,10 +41,14 @@ template `extra-head.html` or above the footer by overwriting
 `layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
 respectively.
 
-To add a TOC to your pages, add `layouts/partials/toc.html` as described in
-link:{uri-hugo-doc-toc}[the Hugo documentation].
-
 If you want source code highlighting, take a look at
 link:{uri-tomorrow-pygments}[tomorrow-pygments].
+
+== Good to know
+
+Table of contents are only written when the word count exceeds 400 and the `toc`
+field in your content’s front matter is set to true. See
+link:{uri-hugo-doc-toc}[the Hugo documentation] for details. You can overwrite
+the template by adding the file `layouts/partials/toc.html` to your blog.
 
 include::{uri-base}/raw/branch/main/CONTRIBUTING.adoc[]

@@ -129,12 +129,6 @@ div.admonitionblock td
     margin-top: 2em;
 }
 
-/* Table of contents */
-#toc ul
-{
-    margin-top: 0;
-}
-
 textarea, pre
 {
     overflow: auto;
