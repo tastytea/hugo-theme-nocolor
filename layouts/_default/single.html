@@ -2,5 +2,7 @@
 <h1 class="post-title">{{ if .Draft }}DRAFT: {{ end }}{{ .Title }}</h1>
 {{ partial "post_meta.html" . }}
 
+{{ partial "toc.html" . }}
+
 <div class="content">{{ .Content }}</div>
 {{- end }}

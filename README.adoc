@@ -7,6 +7,7 @@
 :uri-opengraph: http://ogp.me/
 :uri-schema: https://schema.org/
 :uri-twittercards: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards.html
+:uri-hugo-doc-toc: https://gohugo.io/content-management/toc
 :uri-tomorrow-pygments: https://github.com/mozmorris/tomorrow-pygments
 
 *nocolor* is a link:{uri-hugo}[Hugo] theme with no predefined colors and minimal
@@ -39,6 +40,9 @@ template `extra-head.html` or above the footer by overwriting
 `extra_foot.html`. The common way to do it is to create
 `layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
 respectively.
+
+To add a TOC to your pages, add `layouts/partials/toc.html` as described in
+link:{uri-hugo-doc-toc}[the Hugo documentation].
 
 If you want source code highlighting, take a look at
 link:{uri-tomorrow-pygments}[tomorrow-pygments].
