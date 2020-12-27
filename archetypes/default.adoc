@@ -13,3 +13,6 @@ series:
 -
 toc: false
 ---
+
+:toc:
+:toclevels: 2
