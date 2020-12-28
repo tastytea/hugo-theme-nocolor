@@ -1,6 +1,7 @@
 = nocolor
 :project: hugo-theme-nocolor
 :uri-base: https://schlomp.space/tastytea/{project}
+:uri-archive: {uri-base}/archive/main.tar.gz
 :uri-hugo: https://gohugo.io/
 :uri-slick: https://github.com/spookey/slick
 :uri-slick-example: {uri-slick}/blob/master/_sites/example/config.toml
@@ -21,14 +22,20 @@ styling. It is based on link:{uri-slick}[Slick].
   link:{uri-twittercards}[Twitter Cards] support.
 * Fully customizable menu entries.
 * No JavaScript, no bundled fonts, no external requests.
+* Ability to inject own CSS file.
 
 == Installation
 
 [source,shell]
 --------------------------------------------------------------------------------
-git submodule add https://schlomp.space/tastytea/hugo-theme-nocolor.git themes/nocolor
+git submodule add --branch main https://schlomp.space/tastytea/hugo-theme-nocolor.git themes/nocolor
 echo 'theme = "nocolor"' >> config.toml
 --------------------------------------------------------------------------------
+
+Update with `git submodule update --remote`. If you don't keep your blog in a
+git repository, install it with `git clone
+https://schlomp.space/tastytea/hugo-theme-nocolor.git themes/nocolor` or unpack
+the link:{uri-archive}[archive] into `themes/nocolor`.
 
 == Configuration & Modification
 
