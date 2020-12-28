@@ -8,10 +8,13 @@
   <ul>
     {{- $curr := . }}
     {{- range .Site.Menus.main }}
-    {{- $selected := cond (or ($curr.IsMenuCurrent "main" .) ($curr.HasMenuCurrent "main" .)) "" "" }}
+    {{- if .URL }}
     <li>
       <a href="{{ .URL }}">{{ .Name }}</a>
     </li>
+    {{- else }}
+    {{ .Name }}
+    {{- end }}
     {{- end }}
   </ul>
 </nav>
