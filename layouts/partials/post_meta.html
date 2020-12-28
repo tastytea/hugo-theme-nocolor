@@ -22,7 +22,7 @@
       {{- $taxo := $.Param .Identifier }}
       {{- if $taxo }}
         {{ $name := default .Identifier .Name }}
-        {{ $link := default .Identifier .URL }}
+        {{ $link := default .Identifier .RelPermalink }}
   <span{{ if .Title }} title="{{ .Title }}"{{ end }}>{{ $name }}:</span> &#x5b;
         {{- range $taxo }}
           {{- $perma := lower (path.Join $link (urlize .)) }}
