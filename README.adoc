@@ -9,7 +9,7 @@
 :uri-schema: https://schema.org/
 :uri-twittercards: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards.html
 :uri-hugo-doc-toc: https://gohugo.io/content-management/toc
-:uri-tomorrow-pygments: https://github.com/mozmorris/tomorrow-pygments
+:uri-pygments: https://pygments.org/
 
 *nocolor* is a link:{uri-hugo}[Hugo] theme with no predefined colors and minimal
 styling. It is based on link:{uri-slick}[Slick].
@@ -48,8 +48,30 @@ template `extra-head.html` or above the footer by overwriting
 `layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
 respectively.
 
-If you want source code highlighting, take a look at
-link:{uri-tomorrow-pygments}[tomorrow-pygments].
+=== Syntax highlighting with Asciidoctor
+
+If you want source code highlighting with AsciiDoc, you'll need pygmentize from
+the package link:{uri-pygments}[pygments]. Set this in your config file:
+
+.`config.toml`
+[source,toml]
+--------------------------------------------------------------------------------
+pygmentsCodefences = true
+pygmentsCodeFencesGuessSyntax = false
+pygmentsUseClasses = true
+--------------------------------------------------------------------------------
+
+Run `pygmentize -L styles` for a list of available styles and generate a CSS
+file:
+
+[source,shell]
+--------------------------------------------------------------------------------
+pygmentize -f html -S <style> -a .highlight \
+           | grep -v '^[^\.]' | sed -E 's/ \.(\w+) \{/ \.tok-\1 {/' > static/syntax.css
+--------------------------------------------------------------------------------
+
+And add `:source-highlighter: pygments` at the top of your posts, below the
+front matter. Make sure to include the generated CSS file.
 
 == Good to know
 
