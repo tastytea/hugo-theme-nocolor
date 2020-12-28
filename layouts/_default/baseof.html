@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ default "en" .Site.LanguageCode }}">
 <head>
   <meta charset="utf-8" />
   <title>{{ if and (.Title) (not (eq .Title .Site.Title)) }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
@@ -10,13 +10,26 @@
   {{ if .Site.Params.schema }}{{ template "_internal/schema.html" . }}{{ end -}}
   {{ if .Site.Params.twitter_cards }}{{ template "_internal/twitter_cards.html" . }}{{ end -}}
   {{ .Hugo.Generator }}
-  {{- with .Site.RSSLink }}
-  <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} Feed" />
+  {{- with .Site.Home.OutputFormats.Get "RSS" }}
+    {{- $rssLink := .RelPermalink }}
+  <link href="{{ $rssLink }}" rel="{{ .Rel }}" type="application/rss+xml" title="{{ $.Site.Title }} Feed" />
+    {{- with $.Page.OutputFormats.Get "RSS" }}
+      {{- if ne $rssLink .RelPermalink }}
+  <link href="{{ .RelPermalink }}" rel="{{ .Rel }}" type="application/rss+xml" title="{{ $.Site.Title }} {{ $.Title }} Feed" />
+      {{- end }}
+    {{- end }}
   {{- end }}
-  {{- $favicon := .Site.Params.favicon | default "favicon.ico" }}
-  {{- $favtype := cond (eq (path.Ext $favicon) ".png") "image/png" "image/x-icon" }}
-  <link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ $favicon }}" type="{{ $favtype }}" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/nocolor.css" />
+  {{- with .Site.Params.favicon | default "favicon.ico" }}
+    {{- if resources.Get . }}
+      {{- $favicon := resources.Get . | resources.Fingerprint }}
+  <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}" type="{{ $favicon.MediaType }}" />
+    {{- else if fileExists (path.Join "static" .) }}
+      {{- $favtype := cond (eq (path.Ext .) ".png") "image/png" "image/x-icon" }}
+  <link rel="shortcut icon" href="{{ $.Site.BaseURL }}{{ . }}" type="{{ $favtype }}" />
+    {{- end }}
+  {{- end }}
+  {{- $style := resources.Get "nocolor.css" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{- with .Site.Params.css }}
     {{- if resources.Get . }}
       {{- $styleCustom := resources.Get . | resources.Fingerprint }}
