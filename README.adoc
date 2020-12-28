@@ -30,7 +30,7 @@ git submodule add https://schlomp.space/tastytea/hugo-theme-nocolor.git themes/n
 echo 'theme = "nocolor"' >> config.toml
 --------------------------------------------------------------------------------
 
-== Modification
+== Configuration & Modification
 
 Please take a look at the link:{uri-slick-example}[configuration example for
 Slick]. It is valid for nocolor too.
