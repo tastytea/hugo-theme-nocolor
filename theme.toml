@@ -12,6 +12,6 @@ min_version = "0.60"
     homepage = "https://tastytea.de/"
 
 [original]
-    name = "Slick"
-    homepage = "https://themes.gohugo.io/slick"
+    name = "Frieder Grießhammer"
+    homepage = "https://www.der-beweis.de/"
     repo = "https://github.com/spookey/slick"
