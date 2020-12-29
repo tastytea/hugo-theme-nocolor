@@ -129,6 +129,11 @@ div.admonitionblock td
     margin-top: 2em;
 }
 
+#footnotes hr
+{
+    border-style: dashed;
+}
+
 textarea, pre
 {
     overflow: auto;
