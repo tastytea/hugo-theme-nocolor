@@ -45,7 +45,7 @@ Slick]. It is valid for nocolor too, with these exceptions:
 * `favicon` and `css` have to be in in the assets folder.
 
 You can add things to the end of the `<head>` section by overwriting the partial
-template `extra-head.html` or above the footer by overwriting
+template `extra_head.html` or above the footer by overwriting
 `extra_foot.html`. The common way to do it is to create
 `layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
 respectively.
