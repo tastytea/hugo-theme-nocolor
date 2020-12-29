@@ -21,21 +21,16 @@
   {{- end }}
   {{- with .Site.Params.favicon | default "favicon.ico" }}
     {{- if resources.Get . }}
-      {{- $favicon := resources.Get . | resources.Fingerprint }}
+      {{- $favicon := resources.Get . }}
   <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}" type="{{ $favicon.MediaType }}" />
-    {{- else if fileExists (path.Join "static" .) }}
-      {{- $favtype := cond (eq (path.Ext .) ".png") "image/png" "image/x-icon" }}
-  <link rel="shortcut icon" href="{{ $.Site.BaseURL }}{{ . }}" type="{{ $favtype }}" />
     {{- end }}
   {{- end }}
   {{- $style := resources.Get "nocolor.css" }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{- with .Site.Params.css }}
     {{- if resources.Get . }}
-      {{- $styleCustom := resources.Get . | resources.Fingerprint }}
+      {{- $styleCustom := resources.Get . }}
   <link rel="stylesheet" href="{{ $styleCustom.RelPermalink }}" />
-    {{- else if fileExists (path.Join "static" .) }}
-  <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}" />
     {{- end }}
   {{- end }}
   {{ partial "extra_head.html" . }}

@@ -40,7 +40,9 @@ the link:{uri-archive}[archive] into `themes/nocolor`.
 == Configuration & Modification
 
 Please take a look at the link:{uri-slick-example}[configuration example for
-Slick]. It is valid for nocolor too.
+Slick]. It is valid for nocolor too, with these exceptions:
+
+* `favicon` and `css` have to be in in the assets folder.
 
 You can add things to the end of the `<head>` section by overwriting the partial
 template `extra-head.html` or above the footer by overwriting
