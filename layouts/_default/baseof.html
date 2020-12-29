@@ -15,7 +15,7 @@
   <link href="{{ $rssLink }}" rel="{{ .Rel }}" type="application/rss+xml" title="{{ $.Site.Title }} Feed" />
     {{- with $.Page.OutputFormats.Get "RSS" }}
       {{- if ne $rssLink .RelPermalink }}
-  <link href="{{ .RelPermalink }}" rel="{{ .Rel }}" type="application/rss+xml" title="{{ $.Site.Title }} {{ $.Title }} Feed" />
+  <link href="{{ .RelPermalink }}" rel="{{ .Rel }}" type="application/rss+xml" title="{{ $.Site.Title }}: {{ $.Title }} Feed" />
       {{- end }}
     {{- end }}
   {{- end }}
