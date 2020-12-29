@@ -82,4 +82,9 @@ field in your content’s front matter is set to true. See
 link:{uri-hugo-doc-toc}[the Hugo documentation] for details. You can overwrite
 the template by adding the file `layouts/partials/toc.html` to your blog.
 
+== Screenshots
+
+link:{uri-base}/raw/branch/main/images/screenshot.png[
+image:{uri-base}/raw/branch/main/images/tn.png[Screenshot]]
+
 include::{uri-base}/raw/branch/main/CONTRIBUTING.adoc[]
