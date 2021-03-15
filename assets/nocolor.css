@@ -100,7 +100,7 @@ div.admonitionblock
 
 div.admonitionblock td
 {
-    padding: 0.5em 1em;
+    padding: 0 0.4em;
 }
 
 /* AsciiDoc images. */
