@@ -10,6 +10,7 @@
 :uri-twittercards: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards.html
 :uri-hugo-doc-toc: https://gohugo.io/content-management/toc
 :uri-pygments: https://pygments.org/
+:uri-mozilla-aria-nav: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role
 
 *nocolor* is a link:{uri-hugo}[Hugo] theme with no predefined colors and minimal
 styling. It is based on link:{uri-slick}[Slick].
@@ -49,6 +50,21 @@ template `extra_head.html` or above the footer by overwriting
 `extra_foot.html`. The common way to do it is to create
 `layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
 respectively.
+
+=== Custom ARIA labels
+
+Some elements can't be labeled by default because we don't know what's going to
+be in it. Custom link:{uri-mozilla-aria-nav}[ARIA labels] are supported for the
+top menu and the bottom menu.
+
+.`config.toml`
+[source,toml]
+--------------------------------------------------------------------------------
+[params]
+    [params.aria]
+        menu_top = "Main"
+        menu_bottom = "Contact"
+--------------------------------------------------------------------------------
 
 === Syntax highlighting with Asciidoctor
 
