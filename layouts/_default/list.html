@@ -1,6 +1,6 @@
 {{- define "main" }}
-<div>
-  <p>{{ .Title }}:</p>
+<section aria-labelledby="nocolor_list">
+  <p id="nocolor_list">{{ .Title }}:</p>
   <ul>
     {{- range .Paginator.Pages }}
     <li>
@@ -12,6 +12,6 @@
     </li>
     {{- end }}
   </ul>
-</div>
+</section>
 {{ partial "pagination.html" . }}
 {{- end }}

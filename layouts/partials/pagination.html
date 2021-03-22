@@ -1,7 +1,7 @@
 {{ $pag := .Paginator }}
 
-<div class="pagination">
-  <span>Pages:</span>
+<nav class="pagination" aria-labelledby="nocolor_pages">
+  <span id="nocolor_pages">Pages:</span>
   <ul>
     <li>
       <a href="{{ $pag.First.URL }}">First</a>
@@ -45,4 +45,4 @@
       <a href="{{ $pag.Last.URL }}">Last</a>
     </li>
   </ul>
-</div>
+</nav>

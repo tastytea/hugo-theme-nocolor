@@ -1,7 +1,7 @@
 {{- $showdate := default (default true $.Site.Params.showMetaDates) .Params.showmetadates }}
 {{- $showlink := default (default true $.Site.Params.showMetaLinks) .Params.showmetalinks }}
 {{- if or $showdate $showlink }}
-<div class="post-meta">
+<section class="post-meta" aria-label="Meta data">
   {{- if $showdate }}
   <span>Date:</span>
   <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -32,5 +32,5 @@
   {{- end }}                    <!-- if $taxo -->
   {{- end }}                    <!-- range default $fallback .Site.Menus.meta -->
   {{- end }}                    <!-- - if $showlink  -->
-</div>
+</section>
 {{- end }}                      <!-- if or $showdate $showlink -->

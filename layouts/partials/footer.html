@@ -1,6 +1,6 @@
 <hr>
-<div class="footer">
-  <div class="nav nav-bottom">
+<footer class="footer">
+  <nav class="nav nav-bottom">
     <ul>
       {{- range .Site.Menus.footer }}
       <li>
@@ -17,10 +17,10 @@
       </li>
       {{- end }}
     </ul>
-  </div>
+  </nav>
   {{- with .Site.Copyright }}
-  <div class="copyright">
+  <section class="copyright" aria-label="Copyright">
     {{ . }}
-  </div>
+  </section>
   {{- end }}
-</div>
+</footer>

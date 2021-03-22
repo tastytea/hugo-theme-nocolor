@@ -1,8 +1,8 @@
 {{ if and (gt .WordCount 400 ) (.Params.toc) }}
-<aside class="toc">
+<aside class="toc" aria-labelledby="nocolor_toc-title">
   <header>
-    <h2>Table of contents</h2>
-    </header>
-    {{.TableOfContents}}
+    <h2 id="nocolor_toc-title">Table of contents</h2>
+  </header>
+  {{.TableOfContents}}
 </aside>
 {{ end }}
