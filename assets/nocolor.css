@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6
     text-align: right;
 }
 
-div.listingblock pre
+.listingblock pre
 {
     margin-top: 0.1em;
 }
@@ -75,30 +75,30 @@ li > p
 }
 
 /* AsciiDoc admonition blocks. */
-div.admonitionblock > table, div.admonitionblock td
+.admonitionblock > table, .admonitionblock td
 {
     border: 0;
 }
 
-div.admonitionblock td.icon
+.admonitionblock .icon
 {
     font-size: 120%;
     border-right: solid;
     font-weight: bold;
 }
 
-div.admonitionblock td.icon div.title::after
+.admonitionblock .icon .title::after
 {
     content: ":";
 }
 
-div.admonitionblock
+.admonitionblock
 {
     margin-bottom: 1em;
     margin-left: 1em;
 }
 
-div.admonitionblock td
+.admonitionblock td
 {
     padding: 0 0.4em;
 }
