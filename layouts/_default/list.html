@@ -3,11 +3,11 @@
   <p id="nocolor_list">{{ .Title }}:</p>
   <ul>
     {{- range .Paginator.Pages }}
-    <li>
-      <div class="post-title">
+    <li role="article">
+      <section class="post-title" aria-label="Title">
         {{- if .Draft }}DRAFT: {{ end }}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </div>
+      </section>
       {{ partial "post_meta.html" . }}
     </li>
     {{- end }}

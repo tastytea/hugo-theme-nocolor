@@ -1,8 +1,12 @@
 {{- define "main" }}
-<h1 class="post-title">{{ if .Draft }}DRAFT: {{ end }}{{ .Title }}</h1>
-{{ partial "post_meta.html" . }}
+<article aria-labelledby="nocolor_title">
+  <h1 class="post-title" id="nocolor_title">{{ if .Draft }}DRAFT: {{ end }}{{ .Title }}</h1>
+  {{ partial "post_meta.html" . }}
 
-{{ partial "toc.html" . }}
+  {{ partial "toc.html" . }}
 
-<article class="content">{{ .Content }}</article>
+<section class="content" aria-label="Content">
+{{ .Content }}
+</section>
+</article>
 {{- end }}
