@@ -1,6 +1,6 @@
 {{- define "main" }}
 <section aria-labelledby="nocolor_terms">
-  <p id="nocolor_terms">{{ .Title }}:</p>
+  <h1 id="nocolor_terms">{{ .Title }}:</h1>
   <ul>
     {{- range .Data.Terms.ByCount }}
       {{ $count := .Count }}
