@@ -1,5 +1,5 @@
 <header class="header">
-  <a class="title" href="{{ .Site.Home.URL }}">{{ .Site.Title }}</a>
+  <a class="title" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
   {{- with .Site.Params.subtitle }}
   <span class="description">{{ . }}</span>
   {{- end }}
