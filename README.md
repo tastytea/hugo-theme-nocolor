@@ -49,8 +49,7 @@ be in it. Custom [ARIA
 labels](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
 are supported for the top menu and the bottom menu.
 
-.`config.toml`
-
+`config.toml`:
 ``` toml
 [params]
     [params.aria]
@@ -63,8 +62,7 @@ are supported for the top menu and the bottom menu.
 If you want source code highlighting with AsciiDoc, you'll need pygmentize from
 the package [pygments](https://pygments.org/). Set this in your config file:
 
-.`config.toml`
-
+`config.toml`:
 ``` toml
 pygmentsCodefences = true
 pygmentsCodeFencesGuessSyntax = false
