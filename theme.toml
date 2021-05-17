@@ -1,7 +1,7 @@
 name = "nocolor"
 license = "MIT"
 licenselink = "https://opensource.org/licenses/MIT"
-description = "A Hugo theme with no predefined colors."
+description = "A Hugo theme with no predefined colors and minimal styling."
 homepage = "https://schlomp.space/tastytea/hugo-theme-nocolor"
 tags = ["blog", "minimal", "clean", "no js", "light"]
 features = ["blog", "fulltext rss feed"]
