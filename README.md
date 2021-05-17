@@ -82,12 +82,13 @@ pygmentize -f html -S <style> -a .highlight \
 And add `:source-highlighter: pygments` at the top of your posts, below the
 front matter. Make sure to include the generated CSS file.
 
-## Good to know
+### Table of contents
 
 Table of contents are only written when the word count exceeds 400 and the `toc`
 field in your content’s front matter is set to true. See [the Hugo
-documentation](https://gohugo.io/content-management/toc) for details. You can overwrite the template
-by adding the file `layouts/partials/toc.html` to your blog.
+documentation](https://gohugo.io/content-management/toc) for details. You can
+overwrite the template by adding the file `layouts/partials/toc.html` to your
+blog.
 
 ## Screenshots
 
