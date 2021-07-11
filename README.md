@@ -31,8 +31,8 @@ into `themes/nocolor`.
 ## Configuration & Modification
 
 Please take a look at the [configuration example for
-Slick](https://github.com/spookey/slick/blob/master/_sites/example/config.toml). It
-is valid for nocolor too, with these exceptions:
+Slick](https://github.com/spookey/slick/blob/main/_sites/example/config.toml).
+It is valid for nocolor too, with these exceptions:
 
 * `favicon` and `css` have to be in in the assets folder.
 
