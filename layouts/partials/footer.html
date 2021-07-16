@@ -4,9 +4,9 @@
     <ul>
       {{- range .Site.Menus.footer }}
       {{ with .Pre }}{{ . }}{{ end }}
-      <li>
+      <li{{ with .Params.class }} class="{{ . }}"{{ end }}>
         {{- if .URL }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        <a href="{{ .URL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Name }}</a>
         {{- else }}
         {{ .Name }}
         {{- end }}
