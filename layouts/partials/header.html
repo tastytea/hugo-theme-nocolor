@@ -8,13 +8,15 @@
   <ul>
     {{- $curr := . }}
     {{- range .Site.Menus.main }}
-    {{- if .URL }}
+    {{ with .Pre }}{{ . }}{{ end }}
     <li{{ with .Params.class }} class="{{ . }}"{{ end }}>
+      {{- if .URL }}
       <a href="{{ .URL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Name }}</a>
+      {{- else }}
+      <li>{{ .Name }}</li>
+      {{- end }}
     </li>
-    {{- else }}
-    {{ .Name }}
-    {{- end }}
+    {{ with .Post }}{{ . }}{{ end }}
     {{- end }}
   </ul>
 </nav>

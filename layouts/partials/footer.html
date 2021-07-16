@@ -3,6 +3,7 @@
   <nav class="nav nav-bottom"{{- with .Site.Params.aria.menu_bottom }} aria-label="{{ . }}"{{- end }}>
     <ul>
       {{- range .Site.Menus.footer }}
+      {{ with .Pre }}{{ . }}{{ end }}
       <li>
         {{- if .URL }}
         <a href="{{ .URL }}">{{ .Name }}</a>
@@ -10,6 +11,7 @@
         {{ .Name }}
         {{- end }}
       </li>
+      {{ with .Post }}{{ . }}{{ end }}
       {{- end }}
       {{- with .Site.Home.OutputFormats.Get "RSS" }}
       <li>
