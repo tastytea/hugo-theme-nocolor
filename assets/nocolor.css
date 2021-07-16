@@ -16,7 +16,7 @@ body>*
     margin-right: 0.2em;
 }
 
-.header
+.header .title
 {
     font-size: 150%;
     margin-bottom: 1em;
@@ -28,9 +28,9 @@ body>*
     content: " – ";
 }
 
-.header .description
+.nav-top
 {
-    font-size: 75%;
+    margin-top: 1em;
 }
 
 .nav ul, .pagination ul

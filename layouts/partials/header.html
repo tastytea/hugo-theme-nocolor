@@ -3,21 +3,21 @@
   {{- with .Site.Params.subtitle }}
   <span class="description">{{ . }}</span>
   {{- end }}
-</header>
-<nav class="nav nav-top"{{- with .Site.Params.aria.menu_top }} aria-label="{{ . }}"{{- end }}>
-  <ul>
-    {{- $curr := . }}
-    {{- range .Site.Menus.main }}
-    {{ with .Pre }}{{ . }}{{ end }}
-    <li{{ with .Params.class }} class="{{ . }}"{{ end }}>
-      {{- if .URL }}
-      <a href="{{ .URL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Name }}</a>
-      {{- else }}
-      <li>{{ .Name }}</li>
+  <nav class="nav nav-top"{{- with .Site.Params.aria.menu_top }} aria-label="{{ . }}"{{- end }}>
+    <ul>
+      {{- $curr := . }}
+      {{- range .Site.Menus.main }}
+      {{ with .Pre }}{{ . }}{{ end }}
+      <li{{ with .Params.class }} class="{{ . }}"{{ end }}>
+        {{- if .URL }}
+        <a href="{{ .URL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Name }}</a>
+        {{- else }}
+        <li>{{ .Name }}</li>
+        {{- end }}
+      </li>
+      {{ with .Post }}{{ . }}{{ end }}
       {{- end }}
-    </li>
-    {{ with .Post }}{{ . }}{{ end }}
-    {{- end }}
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</header>
 <hr>
