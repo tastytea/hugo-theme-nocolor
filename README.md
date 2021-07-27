@@ -78,7 +78,8 @@ pygmentize -f html -S <style> -a .highlight \
 ```
 
 And add `:source-highlighter: pygments` at the top of your posts, below the
-front matter. Make sure to include the generated CSS file.
+front matter. Make sure to include the generated CSS file. You can also set the
+`source-highlighter` attribute in your config file.[^1]
 
 ### Table of contents
 
@@ -95,3 +96,5 @@ blog.
 ## Contributing
 
 See <https://schlomp.space/tastytea/hugo-theme-nocolor/src/branch/main/CONTRIBUTING.adoc>.
+
+[^1]: https://gohugo.io/content-management/formats/#external-helper-asciidoctor
