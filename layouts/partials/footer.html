@@ -13,11 +13,6 @@
       </li>
       {{ with .Post }}{{ . }}{{ end }}
       {{- end }}
-      {{- with .Site.Home.OutputFormats.Get "RSS" }}
-      <li>
-        <a href="{{ .RelPermalink }}">RSS</a>
-      </li>
-      {{- end }}
     </ul>
   </nav>
   {{- with .Site.Copyright }}

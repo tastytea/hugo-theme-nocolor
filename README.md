@@ -28,6 +28,10 @@ the
 [archive](https://schlomp.space/tastytea/hugo-theme-nocolor/archive/main.tar.gz)
 into `themes/nocolor`.
 
+### Breaking changes:
+
+- 2021-09-25: Don't automatically add RSS hyperlink.
+
 ## Configuration & Modification
 
 Please take a look at the [configuration example for
