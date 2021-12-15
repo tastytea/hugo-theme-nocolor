@@ -46,6 +46,10 @@ template `extra_head.html` or above the footer by overwriting
 `layouts/partials/extra_head.html` or `layouts/partials/extra_foot.html`,
 respectively.
 
+Maybe the [configuration file for my
+blog](https://schlomp.space/tastytea/blog/src/branch/main/config.toml) is
+helpful, too.
+
 ### Custom ARIA labels
 
 Some elements can't be labeled by default because we don't know what's going to
